@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="swiper-bundle.min.css" />
+
+    <title>TED Talks</title>
+  </head>
+
+  <body>
+    <!-- ================================================== Start Navbar ================================================== -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+      <div class="container-fluid px-4">
+        <a class="navbar-brand text-danger" href="index.html"
+          ><img src="images/TED_logo.png" width="80px" height="30px" alt="TED"
+        /></a>
+        <a class="nav-link" href="index.html">Ideas worth spreading</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link fw-bold"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  WATCH
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="tedtalks.html">TED Talks</a>
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link fw-bold"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  DISCOVER
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="podcasts.html">Podcasts</a>
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold" href="login.html" role="button"
+                  >SIGN IN</a
+                >
+              </li>
+            </ul>
+
+            <form class="d-flex p-0 m-0" role="search">
+              <button class="btn btn-outline-danger" type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- =================================================== End Navbar =================================================== -->
+
+    <div class="container-xxl d-flex">
+      <nav
+        class="navbar navbar-expand-lg col-12 d-flex justify-content-between"
+      >
+        <div class="container-fluid col-md-4">
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search for a talk"
+              aria-label="Search"
+            />
+
+            <div class="dropdown">
+              <button
+                class="btn btn-outline-dark dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Sort By
+              </button>
+              <ul
+                class="dropdown-menu border-0"
+                aria-labelledby="dropdownMenuButton"
+              >
+                <li>
+                  <div class="btn-group flex-column">
+                    <button type="button" class="btn btn-outline-dark">
+                      Newest
+                    </button>
+                    <button type="button" class="btn btn-outline-dark">
+                      Oldest
+                    </button>
+                    <button type="button" class="btn btn-outline-dark">
+                      Relevance
+                    </button>
+                    <button type="button" class="btn btn-outline-dark">
+                      Most Viewed
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </form>
+        </div>
+
+        <div class="container-fluid col-md-3">
+          <button class="btn btn-outline-dark me-2" type="submit">
+            Topics
+          </button>
+
+          <div class="dropdown me-2">
+            <button
+              class="btn btn-outline-dark dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              subtitles
+            </button>
+            <ul
+              class="dropdown-menu border-0"
+              aria-labelledby="dropdownMenuButton"
+            >
+              <li>
+                <div class="btn-group flex-column">
+                  <button type="button" class="btn btn-outline-dark">
+                    English
+                  </button>
+                  <button type="button" class="btn btn-outline-dark">
+                    Arabic
+                  </button>
+                  <button type="button" class="btn btn-outline-dark">
+                    Espanol
+                  </button>
+                  <button type="button" class="btn btn-outline-dark">
+                    Frensh
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="dropdown">
+            <button
+              class="btn btn-outline-dark dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Duration
+            </button>
+            <ul
+              class="dropdown-menu border-0"
+              aria-labelledby="dropdownMenuButton"
+            >
+              <li>
+                <div class="btn-group flex-column">
+                  <button type="button" class="btn btn-outline-dark">
+                    0-6 minutes
+                  </button>
+                  <button type="button" class="btn btn-outline-dark">
+                    6-12 minutes
+                  </button>
+                  <button type="button" class="btn btn-outline-dark">
+                    12-18 minutes
+                  </button>
+                  <button type="button" class="btn btn-outline-dark">
+                    18+ minutes
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container-xl mt-4 text-center">
+      <h3 class="container-xl text-center">
+        TED Talks: Discover ideas worth spreading
+      </h3>
+      <div class="row">
+        <div class="col-md-12 mt-4">
+          <button type="button" class="btn btn-light btn-outline-dark">
+            TED-Ed
+          </button>
+          <button type="button" class="btn btn-light btn-outline-dark">
+            Psychology
+          </button>
+          <button type="button" class="btn btn-light btn-outline-dark">
+            Leadership
+          </button>
+          <button type="button" class="btn btn-light btn-outline-dark">
+            Education
+          </button>
+          <button type="button" class="btn btn-light btn-outline-dark">
+            AI
+          </button>
+          <button type="button" class="btn btn-light btn-outline-dark">
+            Sleep
+          </button>
+          <button type="button" class="btn btn-light btn-outline-dark">
+            Mental Health
+          </button>
+        </div>
+        <div class="col-md-12 mt-3">
+          <button type="button" class="btn btn-light btn-outline-dark">
+            Business
+          </button>
+          <button type="button" class="btn btn-light btn-outline-dark">
+            Motivation
+          </button>
+          <button type="button" class="btn btn-light btn-outline-dark">
+            Communication
+          </button>
+          <button type="button" class="btn btn-light btn-outline-dark">
+            Personal Growth
+          </button>
+          <button type="button" class="btn btn-light btn-outline-dark">
+            Sports
+          </button>
+          <button type="button" class="btn btn-light btn-outline-dark">
+            Health
+          </button>
+          <button type="button" class="btn btn-light btn-outline-dark">
+            Language
+          </button>
+        </div>
+
+        <button type="button" class="btn btn-link text-dark">See All</button>
+      </div>
+    </div>
+
+    <div class="container-xl">
+      <!-- <p>Newest Talks</p> -->
+      <h2 class="fw-bold mb-4">Newest talks</h2>
+      <div class="row">
+        <div class="card border-0 col-md-3">
+          <div class="position-relative">
+            <img
+              src="https://talkstar-photos.s3.amazonaws.com/uploads/93c378da-302d-49ae-bd61-11102e674a2c/AlGore_2023T-1350x675.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <span
+              class="badge text-bg-secondary col-2 position-absolute bottom-0 end-0"
+              >12:02</span
+            >
+          </div>
+
+          <div class="card-body">
+            <p class="card-text fw-bold">
+              It's time for infectios generosity. Here's how
+            </p>
+          </div>
+        </div>
+
+        <div class="card border-0 col-md-3">
+          <div class="position-relative">
+            <img
+              src="https://talkstar-photos.s3.amazonaws.com/uploads/93c378da-302d-49ae-bd61-11102e674a2c/AlGore_2023T-1350x675.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <span
+              class="badge text-bg-secondary col-2 position-absolute bottom-0 end-0"
+              >12:02</span
+            >
+          </div>
+
+          <div class="card-body">
+            <p class="card-text fw-bold">
+              It's time for infectios generosity. Here's how
+            </p>
+          </div>
+        </div>
+
+        <div class="card border-0 col-md-3">
+          <div class="position-relative">
+            <img
+              src="https://talkstar-photos.s3.amazonaws.com/uploads/93c378da-302d-49ae-bd61-11102e674a2c/AlGore_2023T-1350x675.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <span
+              class="badge text-bg-secondary col-2 position-absolute bottom-0 end-0"
+              >12:02</span
+            >
+          </div>
+
+          <div class="card-body">
+            <p class="card-text fw-bold">
+              It's time for infectios generosity. Here's how
+            </p>
+          </div>
+        </div>
+
+        <div class="card border-0 col-md-3">
+          <div class="position-relative">
+            <img
+              src="https://talkstar-photos.s3.amazonaws.com/uploads/93c378da-302d-49ae-bd61-11102e674a2c/AlGore_2023T-1350x675.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <span
+              class="badge text-bg-secondary col-2 position-absolute bottom-0 end-0"
+              >12:02</span
+            >
+          </div>
+
+          <div class="card-body">
+            <p class="card-text fw-bold">
+              It's time for infectios generosity. Here's how
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-2">
+        <div class="card border-0 col-md-3">
+          <div class="position-relative">
+            <img
+              src="https://talkstar-photos.s3.amazonaws.com/uploads/93c378da-302d-49ae-bd61-11102e674a2c/AlGore_2023T-1350x675.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <span
+              class="badge text-bg-secondary col-2 position-absolute bottom-0 end-0"
+              >12:02</span
+            >
+          </div>
+
+          <div class="card-body">
+            <p class="card-text fw-bold">
+              It's time for infectios generosity. Here's how
+            </p>
+          </div>
+        </div>
+
+        <div class="card border-0 col-md-3">
+          <div class="position-relative">
+            <img
+              src="https://talkstar-photos.s3.amazonaws.com/uploads/93c378da-302d-49ae-bd61-11102e674a2c/AlGore_2023T-1350x675.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <span
+              class="badge text-bg-secondary col-2 position-absolute bottom-0 end-0"
+              >12:02</span
+            >
+          </div>
+
+          <div class="card-body">
+            <p class="card-text fw-bold">
+              It's time for infectios generosity. Here's how
+            </p>
+          </div>
+        </div>
+
+        <div class="card border-0 col-md-3">
+          <div class="position-relative">
+            <img
+              src="https://talkstar-photos.s3.amazonaws.com/uploads/93c378da-302d-49ae-bd61-11102e674a2c/AlGore_2023T-1350x675.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <span
+              class="badge text-bg-secondary col-2 position-absolute bottom-0 end-0"
+              >12:02</span
+            >
+          </div>
+
+          <div class="card-body">
+            <p class="card-text fw-bold">
+              It's time for infectios generosity. Here's how
+            </p>
+          </div>
+        </div>
+
+        <div class="card border-0 col-md-3">
+          <div class="position-relative">
+            <img
+              src="https://talkstar-photos.s3.amazonaws.com/uploads/93c378da-302d-49ae-bd61-11102e674a2c/AlGore_2023T-1350x675.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <span
+              class="badge text-bg-secondary col-2 position-absolute bottom-0 end-0"
+              >12:02</span
+            >
+          </div>
+
+          <div class="card-body">
+            <p class="card-text fw-bold">
+              It's time for infectios generosity. Here's how
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-2">
+        <div class="card border-0 col-md-3">
+          <div class="position-relative">
+            <img
+              src="https://talkstar-photos.s3.amazonaws.com/uploads/93c378da-302d-49ae-bd61-11102e674a2c/AlGore_2023T-1350x675.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <span
+              class="badge text-bg-secondary col-2 position-absolute bottom-0 end-0"
+              >12:02</span
+            >
+          </div>
+
+          <div class="card-body">
+            <p class="card-text fw-bold">
+              It's time for infectios generosity. Here's how
+            </p>
+          </div>
+        </div>
+
+        <div class="card border-0 col-md-3">
+          <div class="position-relative">
+            <img
+              src="https://talkstar-photos.s3.amazonaws.com/uploads/93c378da-302d-49ae-bd61-11102e674a2c/AlGore_2023T-1350x675.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <span
+              class="badge text-bg-secondary col-2 position-absolute bottom-0 end-0"
+              >12:02</span
+            >
+          </div>
+
+          <div class="card-body">
+            <p class="card-text fw-bold">
+              It's time for infectios generosity. Here's how
+            </p>
+          </div>
+        </div>
+
+        <div class="card border-0 col-md-3">
+          <div class="position-relative">
+            <img
+              src="https://talkstar-photos.s3.amazonaws.com/uploads/93c378da-302d-49ae-bd61-11102e674a2c/AlGore_2023T-1350x675.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <span
+              class="badge text-bg-secondary col-2 position-absolute bottom-0 end-0"
+              >12:02</span
+            >
+          </div>
+
+          <div class="card-body">
+            <p class="card-text fw-bold">
+              It's time for infectios generosity. Here's how
+            </p>
+          </div>
+        </div>
+
+        <div class="card border-0 col-md-3">
+          <div class="position-relative">
+            <img
+              src="https://talkstar-photos.s3.amazonaws.com/uploads/93c378da-302d-49ae-bd61-11102e674a2c/AlGore_2023T-1350x675.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <span
+              class="badge text-bg-secondary col-2 position-absolute bottom-0 end-0"
+              >12:02</span
+            >
+          </div>
+
+          <div class="card-body">
+            <p class="card-text fw-bold">
+              It's time for infectios generosity. Here's how
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-2">
+        <div class="card border-0 col-md-3">
+          <div class="position-relative">
+            <img
+              src="https://talkstar-photos.s3.amazonaws.com/uploads/93c378da-302d-49ae-bd61-11102e674a2c/AlGore_2023T-1350x675.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <span
+              class="badge text-bg-secondary col-2 position-absolute bottom-0 end-0"
+              >12:02</span
+            >
+          </div>
+
+          <div class="card-body">
+            <p class="card-text fw-bold">
+              It's time for infectios generosity. Here's how
+            </p>
+          </div>
+        </div>
+
+        <div class="card border-0 col-md-3">
+          <div class="position-relative">
+            <img
+              src="https://talkstar-photos.s3.amazonaws.com/uploads/93c378da-302d-49ae-bd61-11102e674a2c/AlGore_2023T-1350x675.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <span
+              class="badge text-bg-secondary col-2 position-absolute bottom-0 end-0"
+              >12:02</span
+            >
+          </div>
+
+          <div class="card-body">
+            <p class="card-text fw-bold">
+              It's time for infectios generosity. Here's how
+            </p>
+          </div>
+        </div>
+
+        <div class="card border-0 col-md-3">
+          <div class="position-relative">
+            <img
+              src="https://talkstar-photos.s3.amazonaws.com/uploads/93c378da-302d-49ae-bd61-11102e674a2c/AlGore_2023T-1350x675.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <span
+              class="badge text-bg-secondary col-2 position-absolute bottom-0 end-0"
+              >12:02</span
+            >
+          </div>
+
+          <div class="card-body">
+            <p class="card-text fw-bold">
+              It's time for infectios generosity. Here's how
+            </p>
+          </div>
+        </div>
+
+        <div class="card border-0 col-md-3">
+          <div class="position-relative">
+            <img
+              src="https://talkstar-photos.s3.amazonaws.com/uploads/93c378da-302d-49ae-bd61-11102e674a2c/AlGore_2023T-1350x675.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <span
+              class="badge text-bg-secondary col-2 position-absolute bottom-0 end-0"
+              >12:02</span
+            >
+          </div>
+
+          <div class="card-body">
+            <p class="card-text fw-bold">
+              It's time for infectios generosity. Here's how
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-2">
+        <div class="card border-0 col-md-3">
+          <div class="position-relative">
+            <img
+              src="https://talkstar-photos.s3.amazonaws.com/uploads/93c378da-302d-49ae-bd61-11102e674a2c/AlGore_2023T-1350x675.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <span
+              class="badge text-bg-secondary col-2 position-absolute bottom-0 end-0"
+              >12:02</span
+            >
+          </div>
+
+          <div class="card-body">
+            <p class="card-text fw-bold">
+              It's time for infectios generosity. Here's how
+            </p>
+          </div>
+        </div>
+
+        <div class="card border-0 col-md-3">
+          <div class="position-relative">
+            <img
+              src="https://talkstar-photos.s3.amazonaws.com/uploads/93c378da-302d-49ae-bd61-11102e674a2c/AlGore_2023T-1350x675.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <span
+              class="badge text-bg-secondary col-2 position-absolute bottom-0 end-0"
+              >12:02</span
+            >
+          </div>
+
+          <div class="card-body">
+            <p class="card-text fw-bold">
+              It's time for infectios generosity. Here's how
+            </p>
+          </div>
+        </div>
+
+        <div class="card border-0 col-md-3">
+          <div class="position-relative">
+            <img
+              src="https://talkstar-photos.s3.amazonaws.com/uploads/93c378da-302d-49ae-bd61-11102e674a2c/AlGore_2023T-1350x675.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <span
+              class="badge text-bg-secondary col-2 position-absolute bottom-0 end-0"
+              >12:02</span
+            >
+          </div>
+
+          <div class="card-body">
+            <p class="card-text fw-bold">
+              It's time for infectios generosity. Here's how
+            </p>
+          </div>
+        </div>
+
+        <div class="card border-0 col-md-3">
+          <div class="position-relative">
+            <img
+              src="https://talkstar-photos.s3.amazonaws.com/uploads/93c378da-302d-49ae-bd61-11102e674a2c/AlGore_2023T-1350x675.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <span
+              class="badge text-bg-secondary col-2 position-absolute bottom-0 end-0"
+              >12:02</span
+            >
+          </div>
+
+          <div class="card-body">
+            <p class="card-text fw-bold">
+              It's time for infectios generosity. Here's how
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-2">
+        <div class="card border-0 col-md-3">
+          <div class="position-relative">
+            <img
+              src="https://talkstar-photos.s3.amazonaws.com/uploads/93c378da-302d-49ae-bd61-11102e674a2c/AlGore_2023T-1350x675.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <span
+              class="badge text-bg-secondary col-2 position-absolute bottom-0 end-0"
+              >12:02</span
+            >
+          </div>
+
+          <div class="card-body">
+            <p class="card-text fw-bold">
+              It's time for infectios generosity. Here's how
+            </p>
+          </div>
+        </div>
+
+        <div class="card border-0 col-md-3">
+          <div class="position-relative">
+            <img
+              src="https://talkstar-photos.s3.amazonaws.com/uploads/93c378da-302d-49ae-bd61-11102e674a2c/AlGore_2023T-1350x675.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <span
+              class="badge text-bg-secondary col-2 position-absolute bottom-0 end-0"
+              >12:02</span
+            >
+          </div>
+
+          <div class="card-body">
+            <p class="card-text fw-bold">
+              It's time for infectios generosity. Here's how
+            </p>
+          </div>
+        </div>
+
+        <div class="card border-0 col-md-3">
+          <div class="position-relative">
+            <img
+              src="https://talkstar-photos.s3.amazonaws.com/uploads/93c378da-302d-49ae-bd61-11102e674a2c/AlGore_2023T-1350x675.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <span
+              class="badge text-bg-secondary col-2 position-absolute bottom-0 end-0"
+              >12:02</span
+            >
+          </div>
+
+          <div class="card-body">
+            <p class="card-text fw-bold">
+              It's time for infectios generosity. Here's how
+            </p>
+          </div>
+        </div>
+
+        <div class="card border-0 col-md-3">
+          <div class="position-relative">
+            <img
+              src="https://talkstar-photos.s3.amazonaws.com/uploads/93c378da-302d-49ae-bd61-11102e674a2c/AlGore_2023T-1350x675.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <span
+              class="badge text-bg-secondary col-2 position-absolute bottom-0 end-0"
+              >12:02</span
+            >
+          </div>
+
+          <div class="card-body">
+            <p class="card-text fw-bold">
+              It's time for infectios generosity. Here's how
+            </p>
+          </div>
+        </div>
+      </div>
+      <hr />
+    </div>
+
+    <div class="container-xl mt-4 mb-4 text-center">
+      <p class="container-xl text-center">
+        Didn't find what you like? Start a search.
+      </p>
+      <div class="row">
+        <div class="col-md-12 mt-4">
+          <button type="button" class="btn btn-light btn-outline-dark">
+            TED-Ed
+          </button>
+          <button type="button" class="btn btn-light btn-outline-dark">
+            Psychology
+          </button>
+          <button type="button" class="btn btn-light btn-outline-dark">
+            Leadership
+          </button>
+          <button type="button" class="btn btn-light btn-outline-dark">
+            Education
+          </button>
+          <button type="button" class="btn btn-light btn-outline-dark">
+            AI
+          </button>
+          <button type="button" class="btn btn-light btn-outline-dark">
+            Sleep
+          </button>
+          <button type="button" class="btn btn-light btn-outline-dark">
+            Mental Health
+          </button>
+        </div>
+        <div class="col-md-12 mt-3">
+          <button type="button" class="btn btn-light btn-outline-dark">
+            Business
+          </button>
+          <button type="button" class="btn btn-light btn-outline-dark">
+            Motivation
+          </button>
+          <button type="button" class="btn btn-light btn-outline-dark">
+            Communication
+          </button>
+          <button type="button" class="btn btn-light btn-outline-dark">
+            Personal Growth
+          </button>
+          <button type="button" class="btn btn-light btn-outline-dark">
+            Sports
+          </button>
+          <button type="button" class="btn btn-light btn-outline-dark">
+            Health
+          </button>
+          <button type="button" class="btn btn-light btn-outline-dark">
+            Language
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================================================== Start Footer ================================================== -->
+    <footer class="container-fluid p-4">
+      <img
+        class="d-flex block-flex pt-3 mb-4"
+        src="images/TED-2-logo.png"
+        alt="TED"
+        style="height: 40px; width: 80px"
+      />
+      <div class="row">
+        <div class="col-lg-3 col-md-6 mb-3">
+          <h3>Explore</h3>
+          <p>TEDx</p>
+          <p>TED Fellows</p>
+          <p>TED Ed</p>
+          <p>TED Translators</p>
+          <p>TED Institute</p>
+          <p>The Audacious Project</p>
+          <p>TED@Work</p>
+          <p>Podcasts</p>
+          <p>TED Blog</p>
+          <p>More ways to get TED</p>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-3">
+          <h3>Our community</h3>
+          <p>TED Speakers</p>
+          <p>TED Fellows</p>
+          <p>TED Translators</p>
+          <p>TED TEDx Organizers</p>
+          <p>TED Community</p>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-3">
+          <h3>Newsletters</h3>
+
+          <p class="fs-5">
+            <i class="fa-sharp fa-regular fa-envelope"></i> Get the latest talks
+          </p>
+
+          <p>
+            Get a daily email featuring the latest talk, plus a quick mix of
+            trending content.
+          </p>
+
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="What's your email?"
+            />
+            <button type="button" class="btn btn-outline-light">
+              Subscribe
+            </button>
+          </div>
+
+          <p>
+            By subscribing, you understand and agree that we will store, process
+            and manage your personal information according to our
+            <span> Privacy Policy</span>
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-3">
+          <h3>Become a TED Member ></h3>
+          <p>
+            TED Members make our mission possible by supporting global access to
+            inspiring ideas. Plus, they get to attend exclusive events. Help
+            support a better future – and a brighter you.
+          </p>
+          <p class="fs-5">Follow TED</p>
+          <div class="d-flex justify-content-evenly mb-4">
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-facebook"></i>
+          </div>
+
+          <p class="fs-5">Download the TED App</p>
+          <div>
+            <button type="button" class="btn btn-outline-light">
+              <i class="fa-brands fa-google-play"></i> Google Play
+            </button>
+
+            <button type="button" class="btn btn-outline-light">
+              <i class="fa-brands fa-apple"></i>
+              App Store
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <hr class="m-4 mb-4" />
+
+      <div class="row">
+        <div class="col-lg-2 col-md-3 col-sm-6 mb-3">
+          <p>TED Talks Usage Policy</p>
+          <p>Jobs</p>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-6 mb-3">
+          <p>Privacy Policy</p>
+          <p>Press</p>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-6 mb-3">
+          <p>Advertising / Partnership</p>
+          <p>Help</p>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-6 mb-3">
+          <p>TED.com Terms of Use</p>
+          <p>Privacy Preferences</p>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+          <p>© TED Conferences, LLC. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- =================================================== End Footer =================================================== -->
+
+    <script src="bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

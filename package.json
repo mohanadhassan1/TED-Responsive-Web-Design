@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "swiper": "^11.0.5"
+  },
+  "name": "responsive-project---ted",
+  "version": "1.0.0",
+  "main": "podcasts.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
